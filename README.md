@@ -1,5 +1,7 @@
 # localcert.mk
 
+[![Build Status](https://travis-ci.org/caligin/localcert.mk.svg?branch=master)](https://travis-ci.org/caligin/localcert.mk)
+
 A Makefile include to handle localhost certificates. Be prod like, enable TLS locally.
 
 Often webapp projects are implemented with weird exceptions and complicated config switches to change the running and testing behaviour locally as we don't have/don't want to set up certificates and https (think cookies and `httpOnly` flags...). This make include aims to ease the process of generating and trusting certificates to help getting rid of some accidental complexity caused by non-prod-like setups.
@@ -17,7 +19,7 @@ To also manage trust:
 
 ## Usage
 
-Grab `localcert.mk` from Github's raw link and place it next to your `Makefile` (or in the root of your project if you don't have a `Makefile`).
+Grab `localcert.mk` from [Github's raw link](https://raw.githubusercontent.com/caligin/localcert.mk/master/localcert.mk) and place it next to your `Makefile` (or in the root of your project if you don't have a `Makefile`).
 
 Then if you're already using make, add the following line to your `Makefile`:
 ```
