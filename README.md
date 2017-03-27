@@ -6,7 +6,7 @@ A Makefile include to handle localhost certificates. Be prod like, enable TLS lo
 
 Often webapp projects are implemented with weird exceptions and complicated config switches to change the running and testing behaviour locally as we don't have/don't want to set up certificates and https (think cookies and `httpOnly` flags...). This make include aims to ease the process of generating and trusting certificates to help getting rid of some accidental complexity caused by non-prod-like setups.
 
-For now it mainly supports JVM-based applications by generating a Java keystore.
+For now it mainly supports JVM-based applications on linux by generating a Java keystore.
 
 ## Requirements
 
@@ -103,7 +103,7 @@ I know it's 2017 but we're not all lucky enough to be dockering all the time. So
 
 Make might have a fairly arcane syntax and a steep learning curve, but it's widely available and it's good at combining different tools together while ensuring that stuff is not done twice when you don't need to.
 
-### This looks just for java and your tests are ugly (a.k.a. Contributing)
+### This looks just for linux/java and your tests are ugly (a.k.a. Contributing)
 
 This is what you get for a-night-and-a-train-ride hack. If you have hints, complaints or find a bug open a ticket!
 
