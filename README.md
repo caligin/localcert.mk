@@ -93,7 +93,7 @@ Part of the problem though is that often developers find the interface of `keyto
 
 The thinking behind `localcert.mk` is that by making it easy to generate, regenerate and throw away a local certificate we avoid the sharing problem, thus retaining the trust within the boundary of the local machine.
 
-So yeah, don't share that cert or it's game over.
+So yeah, don't share that private key or it's game over.
 
 ### But I can have https with some nginx in dockerdockerdocker!
 
