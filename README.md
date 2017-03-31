@@ -83,6 +83,10 @@ The project name prefixes all generated filenames and aliases.
 
 Password to keystore and private key. Defaults to `correct horse battery staple` ([obligatory xkcd](https://xkcd.com/936/)).
 
+#### `LOCALCERT_VALIDITY`
+
+Validity of the certificate in days. Defaults to 30.
+
 ## Other interesting considerations
 
 ### Security & trust boundaries

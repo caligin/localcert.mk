@@ -7,6 +7,7 @@ ALIAS := $(PROJECT)-localhost
 LOCALCERT_KEYSTORE ?= $(ALIAS).jks
 LOCALCERT_CERT ?= $(ALIAS).crt
 LOCALCERT_PASSWORD ?= "correct horse battery staple"
+LOCALCERT_VALIDITY ?= 30
 
 .PHONY: all distclean-localcert gitignore-localcert trust-localcert untrust-localcert
 
@@ -14,7 +15,7 @@ LOCALCERT_PASSWORD ?= "correct horse battery staple"
 all:
 
 $(LOCALCERT_KEYSTORE):
-	keytool -genkey -keyalg RSA -alias $(ALIAS) -keystore $@ -storepass $(LOCALCERT_PASSWORD) -keypass $(LOCALCERT_PASSWORD) -dname 'CN=localhost' -validity 360 -keysize 2048
+	keytool -genkey -keyalg RSA -alias $(ALIAS) -keystore $@ -storepass $(LOCALCERT_PASSWORD) -keypass $(LOCALCERT_PASSWORD) -dname 'CN=localhost' -validity $(LOCALCERT_VALIDITY) -keysize 2048
 
 $(LOCALCERT_CERT): $(LOCALCERT_KEYSTORE)
 	keytool -exportcert -alias $(ALIAS) -keystore $< -storepass $(LOCALCERT_PASSWORD) | openssl x509 -inform der -outform pem -out $@
